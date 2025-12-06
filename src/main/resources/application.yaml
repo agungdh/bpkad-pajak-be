@@ -1,3 +1,23 @@
 spring:
   application:
     name: bpkad-pajak
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/pajak
+    username: admin
+    password: admin
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+
+  threads:
+    virtual:
+      enabled: on
+
+server:
+  port: 8080
